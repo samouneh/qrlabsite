@@ -1,0 +1,183 @@
+ 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Tailwind Play CDN (no build step) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>QRLab — QR checklists for lab equipment</title>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 to-black text-white">
+    <!-- NAV -->
+    <header class="sticky top-0 z-30 backdrop-blur bg-black/30 border-b border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-cyan-400 to-emerald-400 flex items-center justify-center font-bold">Q</div>
+          <span class="text-xl font-semibold tracking-tight">QRLab</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+          <a href="#how" class="hover:text-white">How it works</a>
+          <a href="#features" class="hover:text-white">Features</a>
+          <a href="#pricing" class="hover:text-white">Pricing</a>
+          <a href="#cta" class="hover:text-white">Get started</a>
+        </nav>
+        <a href="#cta" class="ml-4 inline-flex items-center rounded-xl bg-white/10 px-4 py-2 text-sm font-medium hover:bg-white/20">Try the demo</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 grid md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-6">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            QR-coded checklists & maintenance
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">for lab equipment</span>
+          </h1>
+          <p class="mt-5 text-slate-300 max-w-xl">
+            Stick a QR on each instrument. Scan to see SOP, COSHH/SDS links, last inspection, and log issues in seconds.
+            No coding, works from a Google Sheet.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#cta" class="inline-flex items-center rounded-2xl px-5 py-3 bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-semibold shadow">Build in 1 hour</a>
+            <a href="#how" class="inline-flex items-center rounded-2xl px-5 py-3 border border-white/20 text-white hover:bg-white/10">See how it works</a>
+          </div>
+          <div class="mt-6 text-xs text-slate-400">Backed by Airtable/Google Sheets + Glide. Alerts via Zapier. No app installs.</div>
+        </div>
+        <!-- phone mock -->
+        <div class="md:col-span-6 flex justify-center">
+          <div class="relative w-[320px] h-[660px] rounded-[36px] border border-white/20 bg-slate-800/60 shadow-2xl overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-8 bg-black/40"></div>
+            <div class="p-4">
+              <div class="rounded-2xl bg-white/5 p-4">
+                <div class="text-sm text-slate-200 font-semibold">Fume Hood #3</div>
+                <div class="mt-1 text-xs text-slate-400">Last serviced: 12 Oct · Next due: 12 Apr</div>
+                <div class="mt-4 grid grid-cols-3 gap-2">
+                  <div class="rounded-xl bg-slate-900/70 p-3 text-center text-xs border border-white/10">SOP</div>
+                  <div class="rounded-xl bg-slate-900/70 p-3 text-center text-xs border border-white/10">COSHH</div>
+                  <div class="rounded-xl bg-slate-900/70 p-3 text-center text-xs border border-white/10">Log Fault</div>
+                </div>
+                <div class="mt-4 rounded-xl bg-slate-900/70 p-3 border border-white/10">
+                  <div class="text-xs text-slate-400">Pre-use checklist</div>
+                  <ul class="mt-2 space-y-2 text-sm">
+                    <li>• Sash height ≤ safe mark</li>
+                    <li>• Airflow indicator green</li>
+                    <li>• Spill kit present</li>
+                  </ul>
+                </div>
+                <div class="mt-4 rounded-xl bg-emerald-400/10 border border-emerald-300/30 text-emerald-200 text-xs p-3">Compliant today ✓</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-20">
+        <h2 class="text-2xl md:text-4xl font-bold">How it works</h2>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-bold">1</div>
+            <h3 class="text-lg font-semibold">Import your inventory</h3>
+            <p class="mt-2 text-slate-300 text-sm">Copy our Google Sheet: Equipment, SOP links, service dates, safety roles.</p>
+          </div>
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-bold">2</div>
+            <h3 class="text-lg font-semibold">Print QR labels</h3>
+            <p class="mt-2 text-slate-300 text-sm">Auto-generate QR codes that deep-link to each asset’s page.</p>
+          </div>
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-bold">3</div>
+            <h3 class="text-lg font-semibold">Scan & go</h3>
+            <p class="mt-2 text-slate-300 text-sm">Scan to tick checklists, read COSHH/SDS, and log faults. Alerts go to email/Teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-20">
+        <h2 class="text-2xl md:text-4xl font-bold">Built for labs</h2>
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold">COSHH & SDS links</h3>
+            <p class="mt-2 text-slate-300 text-sm">Pin safety data sheets and control measures to every asset.</p>
+          </div>
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold">PUWER-friendly logs</h3>
+            <p class="mt-2 text-slate-300 text-sm">Keep simple records of inspections and maintenance.</p>
+          </div>
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold">Pre-use checklists</h3>
+            <p class="mt-2 text-slate-300 text-sm">2-minute checks before use; store evidence with timestamp.</p>
+          </div>
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold">Alerts & exports</h3>
+            <p class="mt-2 text-slate-300 text-sm">Email alerts on faults; export to CSV/PDF.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-20">
+        <h2 class="text-2xl md:text-4xl font-bold">Simple pricing</h2>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <div class="rounded-2xl p-6 border border-white/10 bg-white/5">
+            <div class="text-sm text-slate-300">Student Society</div>
+            <div class="mt-2 text-3xl font-extrabold">Free</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• Up to 50 assets</li><li>• Email alerts</li><li>• CSV export</li>
+            </ul>
+            <a href="#cta" class="mt-6 inline-flex bg-white/10 text-white hover:bg-white/20 rounded-xl px-4 py-2 font-semibold">Start</a>
+          </div>
+          <div class="rounded-2xl p-6 border border-emerald-400 bg-emerald-400/10">
+            <div class="text-sm text-slate-300">Lab Starter</div>
+            <div class="mt-2 text-3xl font-extrabold">£19/mo</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• Up to 250 assets</li><li>• Checklists & logs</li><li>• QR label sheet</li>
+            </ul>
+            <a href="#cta" class="mt-6 inline-flex bg-emerald-400 text-black rounded-xl px-4 py-2 font-semibold">Start</a>
+          </div>
+          <div class="rounded-2xl p-6 border border-white/10 bg-white/5">
+            <div class="text-sm text-slate-300">Lab Pro</div>
+            <div class="mt-2 text-3xl font-extrabold">£39/mo</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• Unlimited assets</li><li>• Teams/Slack alerts</li><li>• PDF reports</li>
+            </ul>
+            <a href="#cta" class="mt-6 inline-flex bg-white/10 text-white hover:bg-white/20 rounded-xl px-4 py-2 font-semibold">Start</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-20 text-center">
+        <h2 class="text-2xl md:text-4xl font-bold">Ready to impress in ENG2128?</h2>
+        <p class="mt-3 text-slate-300">Prototype with Glide + Google Sheets. Use this page as your demo site.</p>
+        <a class="mt-6 inline-flex rounded-2xl bg-gradient-to-r from-cyan-400 to-emerald-400 px-6 py-3 text-black font-semibold" href="#pricing">Get the build steps</a>
+        <p class="mt-4 text-xs text-slate-500">No coding required.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-8 text-xs text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+        <span>© <span id="year"></span> QRLab — Coursework prototype</span>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
+
